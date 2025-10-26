@@ -7,6 +7,7 @@ export class RacingController {
     async run() {
         try {
             const carNames = await InputView.readNames();
+            const tryCount = await InputView.readTryCount();
         } catch(error) {
             OutputView.printError(error.message);
             throw error;

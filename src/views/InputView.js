@@ -6,6 +6,11 @@ const InputView = {
         const input  = await MissionUtils.Console.readLineAsync(PROMPT.CAR_NAME);
         return input;
     },
+
+    async readTryCount() {
+        const input  = await MissionUtils.Console.readLineAsync(PROMPT.TRY_COUNT);
+        return input;
+    },
 }
 
 export default InputView;
