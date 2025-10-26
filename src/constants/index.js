@@ -1,0 +1,1 @@
+export { default as PROMPT } from './prompts.js';
