@@ -16,7 +16,6 @@ class Race {
 
   getWinners() {
     const maxDistance = Math.max(...this.cars.map((car) => car.getDistance()));
-    console.log('maxDistance:', maxDistance);
     return this.cars.filter((car) => car.getDistance() === maxDistance);
   }
 }
