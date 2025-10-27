@@ -1,4 +1,4 @@
-import { Car } from './Car.js';
+import Car from './Car.js';
 
 class Race {
   constructor(carNames, tryCount) {
@@ -8,6 +8,10 @@ class Race {
 
   moveCars() {
     this.cars.forEach((car) => car.move());
+  }
+
+  getCars() {
+    return this.cars;
   }
 
   getWinners() {

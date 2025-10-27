@@ -13,19 +13,20 @@ export class RacingController {
             validateTryCount(tryCount);
 
             const race = new Race(carNames, tryCount);
-
             OutputView.printStart();
-
-
+            this.startRace(race, tryCount);
+            
+            OutputView.printWinners(race);
         } catch(error) {
             OutputView.printError(error.message);
             throw error;
         }
     }
 
-    startRace() {
-        for (let i = 0; i < this.tryCount; i++) {
-            this.moveCars();
+    startRace(race, tryCount) {
+        for (let i = 0; i < tryCount; i++) {
+            race.moveCars();
+            OutputView.printRoundResult(race);
         }
     }
 }
