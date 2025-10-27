@@ -15,7 +15,7 @@ const OutputView = {
     },
 
     printWinners(cars) {
-        MissionUtils.Console.print(`최종 우승자: ${cars.getWinners().join(', ')}`);
+        MissionUtils.Console.print(`최종 우승자: ${cars.getWinners().map(car => car.getName()).join(', ')}`);
     },
 
     printError(errorMessage) {
